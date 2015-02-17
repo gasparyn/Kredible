@@ -1,9 +1,9 @@
-FactoryGirl.define do
-  factory :property do
-    address "MyString"
-description "MyText"
-image_url "MyString"
-price "9.99"
-  end
+require 'faker'
 
+FactoryGirl.define do
+  factory :property do |f|
+    f.address { Faker::Address.street_address }
+    f.description { Faker::Lorem.paragraph }
+    f.price { Faker::Commerce.price } 
+  end
 end

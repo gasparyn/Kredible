@@ -1,0 +1,16 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+<h2>Welcome!</h2>
+<h1>Available Property Listings</h1>
+
+<% @properties.each do |property| %>
+  <div class="entry">
+    <%= image_tag(property.image_url) %>
+    <h3><%= property.address %></h3>
+    <%= sanitize(property.description) %>
+    <div class="price_line">
+      <span class="price"><%= property.price %></span>
+    </div>
+  </div>
+<% end %>
