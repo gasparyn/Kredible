@@ -1,14 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @blog.body %>
-</p>
+<%= render :partial => @blog %>
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
+
+<h2>Comments</h2>
+<div id ="comments">
+  <%= render :partial => @blog.comments %>
+</div>
+
+<%= form_for [@blog, Comment.new] do |f| %>
+  <p>
+    <%= f.label :body, "New Comment" %></br>
+    <%= f.text_area :body %>
+  </p>
+  <p><%= f.submit "Add comment" %></p>
+<% end %>

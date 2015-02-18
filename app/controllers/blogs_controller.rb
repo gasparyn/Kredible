@@ -1,4 +1,5 @@
 class BlogsController < ApplicationController
+  before_filter :authenticate, :except => [ :index, :show ]
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   # GET /blogs
@@ -71,4 +72,11 @@ class BlogsController < ApplicationController
     def blog_params
       params.require(:blog).permit(:title, :body)
     end
+
+  private
+  def authenticate
+    authenticate_or_request_with_http_basic do |name, password|
+      name == "admin" && password == "runfast"
+    end
+  end
 end
