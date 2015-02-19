@@ -7,6 +7,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'pg'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
@@ -26,10 +27,8 @@ group :development, :test do
   gem 'faker'
   gem 'rspec-rails'
   gem 'rubocop'
-  gem 'sqlite3'
 end
 group :production do
-  gem 'pg'
   gem 'puma'
   gem 'rails_12factor'
 end
@@ -39,3 +38,4 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
 end
+

@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150218160539) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "applications", force: :cascade do |t|
     t.string   "first_name"
     t.string   "middle_name"
@@ -35,7 +38,7 @@ ActiveRecord::Schema.define(version: 20150218160539) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "comments", ["blog_id"], name: "index_comments_on_blog_id"
+  add_index "comments", ["blog_id"], name: "index_comments_on_blog_id", using: :btree
 
   create_table "properties", force: :cascade do |t|
     t.string   "address"
@@ -61,4 +64,5 @@ ActiveRecord::Schema.define(version: 20150218160539) do
     t.integer  "role"
   end
 
+  add_foreign_key "comments", "blogs"
 end
