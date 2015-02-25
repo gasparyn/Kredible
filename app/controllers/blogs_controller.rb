@@ -6,6 +6,12 @@ class BlogsController < ApplicationController
   # GET /blogs.json
   def index
     @blogs = Blog.all
+
+    respond_to do |format|
+      format.html 
+      format.json
+      format.atom
+    end
   end
 
   # GET /blogs/1

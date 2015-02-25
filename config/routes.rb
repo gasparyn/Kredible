@@ -11,5 +11,5 @@ Rails.application.routes.draw do
 
   resources :properties
 
-  root to: 'listings#index'
+  root to: 'blogs#index'
 end

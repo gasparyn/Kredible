@@ -2,7 +2,7 @@
 
 <%= render :partial => @blog %>
 
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Edit', edit_blog_path(@blog) %>
 <%= link_to 'Back', blogs_path %>
 
 <h2>Comments</h2>
@@ -16,4 +16,5 @@
     <%= f.text_area :body %>
   </p>
   <p><%= f.submit "Add comment" %></p>
+
 <% end %>
