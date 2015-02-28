@@ -15,9 +15,15 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
+
+    
+
+    <div id="main">
+      <%= render 'layouts/messages' %>
+      <%= yield %>
+    </div>
+
+    <%= render :partial => 'layouts/footer' %>
+
   </body>
 </html>

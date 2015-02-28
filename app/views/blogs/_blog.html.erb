@@ -1,2 +1,4 @@
  <h2><%= link_to_unless_current blog.title, blog %></h2>
- <%= simple_format blog.body %>
+ <h4>By Anthony Emtman</h4>
+ <h5><%= blog.updated_at.strftime("%d %B %Y") %></h5>
+ <br><%= simple_format blog.body %></br>

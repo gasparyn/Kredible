@@ -1,0 +1,59 @@
+input[type="submit"] {
+  @include button;
+}
+
+div#main {
+  @include grid-row;
+}
+
+.full-width {
+  max-width: 1200px;
+}
+
+// footer CSS
+
+.footer {
+  background-color: #2980b9;
+  padding: 0.5rem 2rem;
+  text-align: center;
+  color: #fff;
+  i {
+    font-size: 75px;
+  }
+}
+
+.footer {
+  h4 {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: 10px;
+  }
+  p {
+    font-weight: 300; 
+    font-size: .9rem;
+  }
+}
+
+@media only screen and (min-width: 40.063em) {
+.footer {
+  .columns:nth-child(n+2) {
+     border-left: 1px solid scale-color(#fff, $lightness: -30%);
+     min-height: 80px;
+  }
+ }
+}
+
+.footer-links {
+  list-style-type: none;
+  a {
+    color: #fff;
+    font-weight: 300;
+    font-size: .9rem;
+  }
+  li {
+    margin-top: 0.5rem;
+  }
+}
