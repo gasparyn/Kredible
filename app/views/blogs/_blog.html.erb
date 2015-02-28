@@ -1,4 +1,12 @@
- <h2><%= link_to_unless_current blog.title, blog %></h2>
- <h4>By Anthony Emtman</h4>
- <h5><%= blog.updated_at.strftime("%d %B %Y") %></h5>
- <br><%= simple_format blog.body %></br>
+<div class="content">
+  <!--Main Blog Content -->
+  <div class="large-9 columns" role="content">
+    <h3><%= link_to_unless_current blog.title, blog %></h3>
+    <h6>Written by Anthony Emtman on <%= blog.updated_at.strftime("%d %B %Y") %></h6>
+    <img src="http://placehold.it/400x240&text=[put an image here!]" alt="alternate text" width="width" height="height" style="float:right" />
+    <%= simple_format blog.body %>
+  </div>
+</div>
+
+
+

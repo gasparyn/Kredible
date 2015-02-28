@@ -2,5 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @blog %> |
-<%= link_to 'Back', blogs_path %>
+<td><%= link_to 'Show', @blog, class: 'button tiny radius' %></td> 
+<td><%= link_to 'Back', blogs_path, class: 'button tiny radius' %></td>
+<td><%= link_to 'Delete', @blog, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button tiny radius' %></td>

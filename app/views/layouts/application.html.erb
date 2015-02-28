@@ -11,13 +11,12 @@
     <%= csrf_meta_tags %>
     <%= auto_discovery_link_tag(:atom, blogs_path(:atom)) %>
   </head>
-  <body class='<%= controller.controller_name %>'>
     <header>
       <%= render 'layouts/navigation' %>
     </header>
-
     
-
+  <body class='<%= controller.controller_name %>'>
+    
     <div id="main">
       <%= render 'layouts/messages' %>
       <%= yield %>
