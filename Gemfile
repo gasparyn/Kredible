@@ -11,6 +11,8 @@ gem 'foundation-icons-sass-rails'
 gem 'pg'
 gem 'activeadmin', github: 'activeadmin'
 gem 'ransack'
+gem 'carrierwave'
+gem 'mini_magick'
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
